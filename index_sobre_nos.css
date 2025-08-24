@@ -1,0 +1,41 @@
+.sobre-nos {
+  background: linear-gradient(to bottom, #fff3e0, #ffe0b2); /* degrade suave */
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre-card {
+  max-width: 900px;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* sombra suave */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* animação ao passar o mouse */
+.sobre-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.sobre-card h2 {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  color: #b85c38;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* leve sombra no título */
+}
+
+.sobre-card p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.sobre-card strong {
+  color: #d97b48;
+}
