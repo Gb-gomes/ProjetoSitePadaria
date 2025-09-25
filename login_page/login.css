@@ -6,7 +6,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to bottom, #fff3e0, #ffe0b2);
+  background-color: #f2f2f2;
 }
 
 .container {
@@ -46,7 +46,7 @@ h2 {
 button {
   width: 100%;
   padding: 10px;
-  background: #4facfe;
+  background: #D1001E;
   border: none;
   border-radius: 8px;
   color: white;
@@ -56,11 +56,11 @@ button {
 }
 
 button:hover {
-  background: #00c6ff;
+  background: #91061b;
 }
 
 #mensagem {
   margin-top: 15px;
   font-size: 14px;
-  color: red;
+  color: #df0707;
 }       

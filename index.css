@@ -10,28 +10,36 @@
     box-sizing: border-box;
     width: 100vw;
 
-    background-color: #EAD7C0;
+    background-color:lch(100% 0 0);
 }
 
 .header {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     display: flex;
     align-items: center; 
-    padding: 20px; 
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+    justify-content: space-between; /* 🔹 distribui logo na esquerda e o resto na direita */
+    padding: 10px 40px;     /* 🔹 espaçamento interno */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03); 
     border-bottom: 2px solid #EAD7C0; 
     text-decoration: none;
     font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     position: sticky;
     top: 0;
     z-index: 100;
-    height: 20px;
-    gap: 90px;
+    height: 80px;
+    gap: 20px;
+    
 }
 
+.logo img {
+    max-height: 80px;                /* 🔹 controla o tamanho da logo */
+    width: auto;
+}
+
+
 .header a {
-    color: #A0522D;
+    color: #D1001E;
     text-decoration: none;
     margin: 0 16px;
     font-weight: 500;
@@ -39,15 +47,23 @@
 }
 
 .header a:hover {
-    color: #D2691E;
+    color: #FFB400;
     text-decoration: underline;
+}
+
+.search-container {
+    display: flex;
+    gap: 8px;           /* distância entre input e botão */
+    align-items: center; /* alinha verticalmente */
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 .container_banner img{
     width: 100%;
-    height: 400px;
-    margin-top: 25px;
-    border-radius: 8px;
+    height: 480px;
+    object-fit: cover;
+    margin-top: 0px;
+    border-radius: 0px;
 }
 
 .produtos {
@@ -57,6 +73,18 @@
     gap: 20px;
     padding: 20px;
 }
+
+.produtos {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.principais-vendidos h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #402416;
+}
+
 
 .img_produto {
     width: 200px;
@@ -77,21 +105,22 @@ label{
 
 .button-buscar {
   padding: 10px;
-  background: #4facfe;
+  background: #D1001E;
   border: none;
-  border-radius: 8px;
+  border-radius: 14px;
   color: white;
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.button-login{
-     padding: 10px;
-  background: #4facfe;
+a.button-login{
+    display: inline-block;
+     padding: 10px 20px;
+  background: #D1001E;
+   color: #ffffff;
   border: none;
-  border-radius: 8px;
-  color: white;
+  border-radius: 14px;
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
@@ -102,7 +131,7 @@ input{
 
   padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 12px;
   font-size: 14px;
   text-align: left;
 }
