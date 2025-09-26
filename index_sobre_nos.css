@@ -1,6 +1,7 @@
 .all_page{
     margin: 0;
     padding: 0;
+  
     box-sizing: border-box;
     width: 100vw;
 
@@ -11,7 +12,7 @@
     background-color: #ffffff;
     display: flex;
     align-items: center; 
-    justify-content: space-between; /* 🔹 distribui logo na esquerda e o resto na direita */
+    justify-content: center; /* 🔹 distribui logo na esquerda e o resto na direita */
     padding: 10px 40px;     /* 🔹 espaçamento interno */
     box-shadow: 0 2px 8px rgba(0,0,0,0.03); 
     border-bottom: 2px solid #EAD7C0; 
@@ -53,13 +54,18 @@
 
 
 .sobre-card {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   max-width: 800px;
   background: #ffffff;
   padding: 40px;
   border-radius: 0px;
   box-shadow: 0 0px 0px #00000026; /* sombra suave */
-  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
 }
 
 /* animação ao passar o mouse */
@@ -117,4 +123,12 @@ input{
   border-radius: 12px;
   font-size: 14px;
   text-align: left;
+}
+
+.container-card{
+  display: flex;
+  /* border: 1px solid black; */
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
 }
