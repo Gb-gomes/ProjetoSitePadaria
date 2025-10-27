@@ -13,43 +13,85 @@
 </head>
 
 <body>
-    <div class="all_page">
+    <section class="all_page">
         <header>
-            <div class="header">
+            <section class="logo">
+                <img src="img/logo.png" alt="Logo da padaria">
+            </section>
+            
+            <p><a href="index.html">Home</a></p>
+            <p><a href="index_cardapio.html">Cardápio</a></p>
+            <p><a href="index_contato.html">Assinatura</a></p>
+            <p><a href="index_sobre_nos.html">Sobre Nós</a></p>
+            <p><a href="index_contato.html">Cestas</a></p>
+            <p><a href="index_contato.html">Contato</a></p>
 
-                <div class="logo">
-                    <img src="img/logo.png" alt="Logo da padaria">
-                </div>
+            
+            <section class="carrinho">
+                <i class="fa-solid fa-cart-plus"></i>
+            </section>
 
-                <p><a href="index.html">Home</a></p>
-                <p><a href="index_sobre_nos.html">Sobre Nós</a></p>
-                <p><a href="index_contato.html">Contato</a></p>
-
-                <div class="search-container">
-                    <input type="text" placeholder="Pesquisar...">
-                    <button class="button-buscar"> Buscar</button>
-                </div>
-
-                
-                <div class="carrinho">
-                    <i class="fa-solid fa-cart-plus"></i>
-                </div>
-
-                <div class="cadastro_conteiner">
-                        <a href="login_page/login.html" class="button-login" >Login </a>
-                    
-                </div>
-
-            </div>
-
-            <div class="container_banner">
+            <section class="cadastro_conteiner">
+                <a href="login_page/login.html" class="button-login" >Login </a>
+            </section>
+        </header>
+        
+        <main>
+            <section class="container_banner">
                 <img src="img/banner paes.png" alt="">
-            </div>
+                <button class="button-comprar"> Peça o seu agora!</button>
+            </section>
 
-            <div class="produtos">
-                  <h1>Principais vendidos</h1>
-                  
+            <section class="welcome-section">
+                <h1>Bem-vindo à Padaria Artesanal Delícias!</h1>
+                <p>Onde cada mordida é feita com amor e tradição.</p>
+            </section>
+
+            <section class="Nossos produtos">
+                <h1>Nossos Produtos</h1>
+                <p>Descubra a variedade de pães, bolos e doces artesanais que preparamos especialmente para você.</p>
+                <img src="" alt="Amostras de produtos da padaria">
+            </section>
+
+            <section class="info-section">
+                <div class="info-card">
+                    <i class="fa-solid fa-bread-slice fa-3x"></i>
+                    <h2>Produtos Frescos</h2>
+                    <p>Nossos pães e doces são preparados diariamente com ingredientes selecionados para garantir o melhor sabor.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-truck fa-3x"></i>
+                    <h2>Entrega Rápida</h2>
+                    <p>Oferecemos entrega rápida e eficiente para que você possa desfrutar de nossas delícias no conforto da sua casa.</p>
+                </div>
+            </section>
+
+            <section class="Escolhidos da estação-ocasião">
+                <h1>Escolhidos da estação</h1>
+
                 <div class="produto1">
+                    <img class="img_produto" src="img/paointegral.jpg" alt="">
+                    <h3>Pão Integral</h3>
+                    <p>R$ 3,00</p>
+                </div>
+
+                <div class="produto2">
+                    <img class="img_produto" src="img/bolofuba.jpg" alt="">
+                    <h3>Bolo de Fubá</h3>
+                    <p>R$ 5,00</p>
+                </div>
+
+                <div class="produto3">
+                    <img class="img_produto" src="img/broa.jpg" alt="">
+                    <h3>Broa de Milho</h3>
+                    <p>R$ 4,00</p>
+                </div>
+            </section>
+
+        <section class="principais-produtos">
+            <h1>Principais vendidos</h1>
+
+            <div class="produto1">
                     <img class="img_produto" src="img/pao.jpg" alt="">
                     <h3>Pão Francês</h3>
                     <p>R$ 0,50</p>
@@ -66,10 +108,31 @@
                     <h3>Croissant</h3>
                     <p>R$ 2,00</p>
                 </div>
+            </section>
 
+            <section class="assinatura de pães">
+                <h1>Assinatura de pães</h1>
+                <p>Receba nossos pães fresquinhos toda semana com descontos exclusivos para assinantes!</p>
+                <button class="button-assinar"> Assine agora!</button>
+            </section>
 
-        </header>
-    </div>
+            <section class="opinões e feedbacks">
+                <h1>Opiniões e Feedbacks</h1>
+                <p>"O melhor pão da cidade! Sempre fresquinho e delicioso." - Maria S.</p>
+                <p>"Adoro a variedade de doces artesanais. Recomendo a todos!" - João P.</p>
+            </section>
+
+            <section class=" comunidade">
+                <h1>Comunidade</h1>
+                <p>Participe de nossos eventos comunitários e workshops de panificação. Junte-se à nossa família Delícias!</p>
+            </section>
+
+        </main>
+    </section>
+    <footer>
+        <p>&copy; 2024 Padaria Artesanal Delícias. Todos os direitos reservados.</p>
+
+    </footer>
 
 </body>
 
