@@ -1,45 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Padaria Atesanal Delícias</title>
+    <title>Padaria Artesanal Delícias</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
 <body>
     <section class="all_page">
-        <header>
+        <header class="header">
             <section class="logo">
                 <img src="img/logo.png" alt="Logo da padaria">
             </section>
-            
-            <p><a href="index.html">Home</a></p>
-            <p><a href="index_cardapio.html">Cardápio</a></p>
-            <p><a href="index_contato.html">Assinatura</a></p>
-            <p><a href="index_sobre_nos.html">Sobre Nós</a></p>
-            <p><a href="index_contato.html">Cestas</a></p>
-            <p><a href="index_contato.html">Contato</a></p>
 
-            
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="index_cardapio.html">Cardápio</a>
+                <a href="index_sobre_nos.html">Sobre Nós</a>
+                <a href="index_contato.html">Contato</a>
+            </nav>
+
             <section class="carrinho">
                 <i class="fa-solid fa-cart-plus"></i>
             </section>
 
             <section class="cadastro_conteiner">
-                <a href="login_page/login.html" class="button-login" >Login </a>
+                <a href="login_page/login.html" class="button-login">Login</a>
             </section>
         </header>
-        
+
         <main>
             <section class="container_banner">
-                <img src="img/banner paes.png" alt="">
-                <button class="button-comprar"> Peça o seu agora!</button>
+                <img src="img/banner paes.png" alt="Banner de Pães">
+                <button class="button-comprar">Peça o seu agora!</button>
             </section>
 
             <section class="welcome-section">
@@ -47,93 +45,84 @@
                 <p>Onde cada mordida é feita com amor e tradição.</p>
             </section>
 
-            <section class="Nossos produtos">
-                <h1>Nossos Produtos</h1>
-                <p>Descubra a variedade de pães, bolos e doces artesanais que preparamos especialmente para você.</p>
-                <img src="" alt="Amostras de produtos da padaria">
-            </section>
+            <section class="produtos">
+                <h1>Novidades no Cardápio</h1>
+                <div class="produtos-grid">
+                    <div class="produto">
+                        <img class="img_produto" src="img/cookiesrecheados.jpg" alt="Cookies Recheados">
+                        <h3>Cookies Recheados</h3>
+                        <p>R$ 5,00</p>
+                        <p class="descricao-produto">Deliciosos cookies recheados com chocolate belga e gotas de caramelo salgado.</p>
+                    </div>
 
-            <section class="info-section">
-                <div class="info-card">
-                    <i class="fa-solid fa-bread-slice fa-3x"></i>
-                    <h2>Produtos Frescos</h2>
-                    <p>Nossos pães e doces são preparados diariamente com ingredientes selecionados para garantir o melhor sabor.</p>
-                </div>
-                <div class="info-card">
-                    <i class="fa-solid fa-truck fa-3x"></i>
-                    <h2>Entrega Rápida</h2>
-                    <p>Oferecemos entrega rápida e eficiente para que você possa desfrutar de nossas delícias no conforto da sua casa.</p>
-                </div>
-            </section>
+                    <div class="produto">
+                        <img class="img_produto" src="img/pãopizza.jpg" alt="Pão Pizza">
+                        <h3>Pão Pizza</h3>
+                        <p>R$ 10,00</p>
+                        <p class="descricao-produto">Pão fresquinho recheado com queijo, tomate e orégano. Ideal para um lanche saboroso.</p>
+                    </div>
 
-            <section class="Escolhidos da estação-ocasião">
-                <h1>Escolhidos da estação</h1>
+                    <div class="produto">
+                        <img class="img_produto" src="img/empadão.jpg" alt="Torta de Frango Cremoso">
+                        <h3>Torta de Frango Cremoso</h3>
+                        <p>R$ 8,50</p>
+                        <p class="descricao-produto">Massa que derrete na boca e delicioso recheio de frango com catupiry.</p>
+                    </div>
 
-                <div class="produto1">
-                    <img class="img_produto" src="img/paointegral.jpg" alt="">
-                    <h3>Pão Integral</h3>
-                    <p>R$ 3,00</p>
-                </div>
-
-                <div class="produto2">
-                    <img class="img_produto" src="img/bolofuba.jpg" alt="">
-                    <h3>Bolo de Fubá</h3>
-                    <p>R$ 5,00</p>
-                </div>
-
-                <div class="produto3">
-                    <img class="img_produto" src="img/broa.jpg" alt="">
-                    <h3>Broa de Milho</h3>
-                    <p>R$ 4,00</p>
+                    <div class="produto">
+                        <img class="img_produto" src="img/croissant.jpg" alt="Croissant">
+                        <h3>Croissant de Chocolate</h3>
+                        <p>R$ 6,00</p>
+                        <p class="descricao-produto">Macio e amanteigado, recheado com chocolate ao leite. Um clássico irresistível.</p>
+                    </div>
                 </div>
             </section>
 
-        <section class="principais-produtos">
-            <h1>Principais vendidos</h1>
+            <section class="principais-vendidos">
+                <h1>Principais vendidos</h1>
+                <div class="produtos-grid">
+                    <div class="produto">
+                        <img class="img_produto" src="img/pãointegral.jpg" alt="Pão Integral">
+                        <h3>Pão Integral</h3>
+                        <p>R$ 2,00</p>
+                    </div>
 
-            <div class="produto1">
-                    <img class="img_produto" src="img/pao.jpg" alt="">
-                    <h3>Pão Francês</h3>
-                    <p>R$ 0,50</p>
-                </div>
+                    <div class="produto">
+                        <img class="img_produto" src="img/broademilho.jpg" alt="Broa de Milho">
+                        <h3>Broa de Milho</h3>
+                        <p>R$ 7,00</p>
+                    </div>
 
-                <div class="produto2">
-                    <img class="img_produto" src="img/paoqueijo.jpg" alt="">
-                    <h3>Pão de Queijo</h3>
-                    <p>R$ 1,50</p>
-                </div>
-
-                <div class="produto3">
-                    <img class="img_produto" src="img/croissantdoce.jpg" alt="">
-                    <h3>Croissant</h3>
-                    <p>R$ 2,00</p>
+                    <div class="produto">
+                        <img class="img_produto" src="img/pãocqueijo.jpg" alt="Pão na Chapa com Queijo">
+                        <h3>Pão na Chapa c/ Queijo</h3>
+                        <p>R$ 4,00</p>
+                    </div>
                 </div>
             </section>
 
-            <section class="assinatura de pães">
+            <section class="assinatura-de-paes">
                 <h1>Assinatura de pães</h1>
                 <p>Receba nossos pães fresquinhos toda semana com descontos exclusivos para assinantes!</p>
-                <button class="button-assinar"> Assine agora!</button>
+                <button class="button-assinar">Assine agora!</button>
             </section>
 
-            <section class="opinões e feedbacks">
+            <section class="opinioes-feedbacks">
                 <h1>Opiniões e Feedbacks</h1>
                 <p>"O melhor pão da cidade! Sempre fresquinho e delicioso." - Maria S.</p>
                 <p>"Adoro a variedade de doces artesanais. Recomendo a todos!" - João P.</p>
             </section>
 
-            <section class=" comunidade">
+            <section class="comunidade">
                 <h1>Comunidade</h1>
                 <p>Participe de nossos eventos comunitários e workshops de panificação. Junte-se à nossa família Delícias!</p>
             </section>
-
         </main>
     </section>
+
     <footer>
         <p>&copy; 2024 Padaria Artesanal Delícias. Todos os direitos reservados.</p>
-
     </footer>
-
 </body>
 
 </html>
