@@ -1,137 +1,146 @@
-*{
+/* RESET BÁSICO */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-.all_page{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    width: 100vw;
-
-    background-color:lch(100% 0 0);
+/* FUNDO SUAVE */
+body {
+    background-color: #fdf6e3; /* bege claro */
+    color: #402416;
 }
 
+/* HEADER */
 .header {
     background-color: #ffffff;
     display: flex;
-    align-items: center; 
-    justify-content: space-between; /* 🔹 distribui logo na esquerda e o resto na direita */
-    padding: 10px 40px;     /* 🔹 espaçamento interno */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03); 
-    border-bottom: 2px solid #EAD7C0; 
-    text-decoration: none;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: 1.3rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    border-bottom: 2px solid #EAD7C0;
     position: sticky;
     top: 0;
     z-index: 100;
     height: 80px;
     gap: 20px;
-    
 }
 
 .logo img {
-    max-height: 80px;                /* 🔹 controla o tamanho da logo */
+    max-height: 60px;
     width: auto;
 }
 
-
-.header a {
+nav a {
     color: #D1001E;
     text-decoration: none;
-    margin: 0 16px;
+    margin: 0 12px;
     font-weight: 500;
     transition: color 0.2s;
 }
 
-.header a:hover {
+nav a:hover {
     color: #FFB400;
     text-decoration: underline;
 }
 
-.search-container {
-    display: flex;
-    gap: 8px;           /* distância entre input e botão */
-    align-items: center; /* alinha verticalmente */
-    font-family: 'Segoe UI', Arial, sans-serif;
+.button-login {
+    padding: 10px 20px;
+    background: #D1001E;
+    color: #ffffff;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 16px;
 }
 
-.container_banner img{
+/* BANNER */
+.container_banner {
+    position: relative;
+    text-align: center;
+}
+
+.container_banner img {
     width: 100%;
     height: 480px;
     object-fit: cover;
-    margin-top: 0px;
-    border-radius: 0px;
 }
 
-.produtos {
+.button-comprar {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    background: #D1001E;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* SEÇÕES */
+.welcome-section,
+.produtos,
+.principais-vendidos,
+.assinatura-de-paes,
+.opinioes-feedbacks,
+.comunidade {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* PRODUTOS GRID */
+.produtos-grid {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
+    margin-top: 20px;
 }
 
-.produtos {
-  text-align: center;
-  padding: 40px 20px;
+.produto {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 220px;
+    text-align: center;
 }
 
-.principais-vendidos h1 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #402416;
-}
-
-
-.img_produto {
+.produto img {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+    margin-bottom: 10px;
 }
 
-
-label{
-  display: block;
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: #555;
+.descricao-produto {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
 }
 
-.button-buscar {
-  padding: 10px;
-  background: #D1001E;
-  border: none;
-  border-radius: 14px;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
+/* BOTÕES */
+.button-assinar {
+    padding: 12px 24px;
+    background: #D1001E;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
 }
 
-a.button-login{
-    display: inline-block;
-     padding: 10px 20px;
-  background: #D1001E;
-   color: #ffffff;
-  border: none;
-  border-radius: 14px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-
-}
-
-input{
-
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  font-size: 14px;
-  text-align: left;
+/* FOOTER */
+footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #EAD7C0;
 }
