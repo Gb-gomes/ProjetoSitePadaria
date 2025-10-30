@@ -118,6 +118,10 @@ nav a:hover {
     text-align: center;
 }
 
+.produtos {
+    background-color:burlywood
+}
+
 .assinatura-de-paes {
     margin-top: 50px;
     background-color: #402416;
@@ -140,8 +144,10 @@ h3{
     font-family:sans-serif
 }
  
-.opinioes-feedbacks p{
+.opinioes-feedbacks {
  margin-top: 5px;
+ background-image: url('img/div-background.jpg');
+ height: 150px;
 }
 
 .welcome-section p {
@@ -202,8 +208,54 @@ h3{
 
 /* FOOTER */
 footer {
-    background-color: #fff;
+    background-color:rgb(160, 97, 45);
     padding: 20px;
     text-align: center;
     border-top: 2px solid #EAD7C0;
+    color: #EAD7C0;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color:#EAD7C0;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #d8c309;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-socials a {
+  color: #EAD7C0;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #d8c309;
+}
+
+.footer-copy {
+  font-size: 15px;
+  color: #EAD7C0;
+  margin-top: 10px;
 }
