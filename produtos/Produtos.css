@@ -64,6 +64,7 @@ nav a:hover {
 }
 
 .button-login {
+    margin-top: 5px;
     padding: 10px 20px;
     background: #D1001E;
     color: #ffffff;
@@ -130,6 +131,58 @@ cursor: pointer;
 button:hover {
 background-color: #d1a55e;
 }
+
+.produtos2 {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+padding: 20px;
+}
+
+
+.produto2 {
+background-color: white;
+border-radius: 8px;
+width: 220px;
+text-align: center;
+padding: 10px;
+}
+
+
+.produto2 img {
+width: 100%;
+border-radius: 8px;
+
+}
+
+
+.produto2 h2 {
+font-size: 18px;
+margin: 10px 0 5px;
+}
+
+
+.preco {
+color: #e2b97c;
+font-weight: bold;
+}
+
+
+button {
+background-color: #e2b97c;
+color: white;
+border: none;
+padding: 8px 12px;
+border-radius: 6px;
+cursor: pointer;
+}
+
+
+button:hover {
+background-color: #d1a55e;
+}
+
 
 
 .carrinho {

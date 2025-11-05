@@ -1,4 +1,4 @@
-/* === ESTILOS SIMPLIFICADOS === */
+/* RESET BÁSICO */
 * {
     margin: 0;
     padding: 0;
@@ -6,71 +6,71 @@
     font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+/* FUNDO SUAVE */
 body {
-    background-color: #fffaf7;
-    min-height: 100vh;
+    background-color: #fdf6e3; /* bege claro */
+    color: #402416;
 }
 
-/* === HEADER === */
+/* HEADER */
 .header {
-    background: #fff;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-bottom: 1px solid #EAD7C0;
+    padding: 10px 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    border-bottom: 2px solid #EAD7C0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 80px;
+    gap: 20px;
 }
 
 .logo img {
-    height: 50px;
+    max-height: 70px;
+    width: auto;
+    left: 50%;
 }
 
-.menu a {
+nav a {
     color: #D1001E;
     text-decoration: none;
-    margin: 0 12px;
+    margin: 10px 20px;
+    padding: 10px 20px;
+    font-size: larger;
     font-weight: 500;
+    transition: color 0.2s;
 }
 
-.menu a.active {
+nav a:hover {
     color: #FFB400;
     text-decoration: underline;
 }
 
-.actions {
-    display: flex;
+.carrinho{
     align-items: center;
-    gap: 8px;
+    justify-content: space-between;
+    gap: 5px;
+    size: 20px;
 }
 
-.search-container input {
-    padding: 5px 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 140px;
-}
-
-.button-buscar {
-    background: #c62828;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.fa-cart-plus {
-    color: #D1001E;
-    font-size: 1.2rem;
+.group {
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    display: flex;
+    right: 20%;
 }
 
 .button-login {
+    padding: 10px 20px;
     background: #D1001E;
-    color: white;
+    color: #ffffff;
+    border-radius: 14px;
     text-decoration: none;
-    padding: 5px 12px;
-    border-radius: 4px;
+    font-size: 16px;
 }
 
 /* === CONTEÚDO PRINCIPAL === */

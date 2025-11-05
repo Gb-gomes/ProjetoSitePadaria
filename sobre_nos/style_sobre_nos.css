@@ -1,55 +1,76 @@
-.all_page{
+/* RESET BÁSICO */
+* {
     margin: 0;
     padding: 0;
-  
     box-sizing: border-box;
-    width: 100vw;
-
-    background-color:lch(100% 0 0);
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+/* FUNDO SUAVE */
+body {
+    background-color: #fdf6e3; /* bege claro */
+    color: #402416;
+}
+
+/* HEADER */
 .header {
     background-color: #ffffff;
     display: flex;
-    align-items: center; 
-    justify-content: center; /* 🔹 distribui logo na esquerda e o resto na direita */
-    padding: 10px 40px;     /* 🔹 espaçamento interno */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03); 
-    border-bottom: 2px solid #EAD7C0; 
-    text-decoration: none;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: 1.3rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    border-bottom: 2px solid #EAD7C0;
     position: sticky;
     top: 0;
     z-index: 100;
-    height: 60px;
+    height: 80px;
     gap: 20px;
-    
 }
 
 .logo img {
-    max-height: 80px;                /* 🔹 controla o tamanho da logo */
+    max-height: 70px;
     width: auto;
-} 
+    left: 50%;
+}
 
-.header a {
+nav a {
     color: #D1001E;
     text-decoration: none;
-    margin: 0 16px;
+    margin: 10px 20px;
+    padding: 10px 20px;
+    font-size: larger;
     font-weight: 500;
     transition: color 0.2s;
 }
 
-.header a:hover {
+nav a:hover {
     color: #FFB400;
     text-decoration: underline;
 }
 
-.search-container {
+.carrinho{
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    size: 20px;
+}
+
+.group {
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
     display: flex;
-    gap: 8px;           /* distância entre input e botão */
-    align-items: center; /* alinha verticalmente */
-    font-family: 'Segoe UI', Arial, sans-serif;
+    right: 20%;
+}
+
+.button-login {
+    padding: 10px 20px;
+    background: #D1001E;
+    color: #ffffff;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 16px;
 }
 
 

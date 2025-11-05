@@ -1,0 +1,136 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* FUNDO SUAVE */
+body {
+    background-color: #fdf6e3; /* bege claro */
+    color: #402416;
+}
+
+/* HEADER */
+.header {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    border-bottom: 2px solid #EAD7C0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 80px;
+    gap: 20px;
+}
+
+.logo img {
+    max-height: 70px;
+    width: auto;
+    left: 50%;
+}
+
+nav a {
+    color: #D1001E;
+    text-decoration: none;
+    margin: 10px 20px;
+    padding: 10px 20px;
+    font-size: larger;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #FFB400;
+    text-decoration: underline;
+}
+
+.carrinho{
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    size: 20px;
+}
+
+.group {
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    display: flex;
+    right: 20%;
+}
+
+.button-login {
+    padding: 10px 20px;
+    background: #D1001E;
+    color: #ffffff;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.form-section {
+  margin-top: 20px;
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-section h1 {
+  margin-bottom: 10px;
+  color: #b85a1b;
+}
+
+.form-section p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #b85a1b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a04f19;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  object-fit: cover;
+}

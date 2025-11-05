@@ -206,6 +206,31 @@ h3{
     margin-top: 40px;
 }
 
+.midias-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  flex-wrap: nowrap; /* impede de quebrar no desktop */
+}
+
+.midia {
+  flex: 1;
+  max-width: 500px;
+}
+
+@media (max-width: 900px) {
+  .midias-container {
+    flex-direction: column; /* empilha no celular */
+    align-items: center;
+  }
+
+  .midia {
+    max-width: 90%;
+  }
+}
+
 /* FOOTER */
 footer {
     background-color:rgb(160, 97, 45);
