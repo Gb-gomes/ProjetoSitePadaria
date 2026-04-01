@@ -51,12 +51,12 @@ nav a:hover {
 .carrinho{
     align-items: center;
     justify-content: space-between;
-    gap: 5px;
+    gap: 10px;
     size: 20px;
 }
 
 .group {
-    align-items: end;
+    align-items: center;
     justify-content: space-between;
     gap: 30px;
     display: flex;
@@ -64,11 +64,11 @@ nav a:hover {
 }
 
 .button-login {
-    margin-top: 5px;
+    margin-top: 2px;
     padding: 10px 20px;
     background: #D1001E;
     color: #ffffff;
-    border-radius: 14px;
+    border-radius: 9px;
     text-decoration: none;
     font-size: 16px;
 }

@@ -59,7 +59,7 @@ nav a:hover {
 .group {
     align-items: end;
     justify-content: space-between;
-    gap: 30px;
+    gap: 25px;
     display: flex;
     right: 20%;
 }
