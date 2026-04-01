@@ -1,24 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Cadastro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Criar Conta</title>
+    <link rel="stylesheet" href="style_register.css">
 </head>
 <body>
+    <section class="all_page">
+        <div class="container">
+            <h2>Criar Conta</h2>
+            
+            <form method="POST" action="processa_register.php">
+                <div class="input-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </div>
 
-<h1>Cadastrar</h1>
-
-<form method="POST" action="processa_register.php">
-    <input type="text" name="nome" placeholder="Nome" required><br><br>
-    
-    <input type="email" name="email" placeholder="E-mail" required><br><br>
-    
-    <input type="password" name="senha" placeholder="Senha" required><br><br>
-    
-    <button type="submit">Cadastrar</button>
-</form>
-
-<a href="login.php">Voltar para login</a>
-
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required>
+                </div>
+                
+                <button type="submit">Cadastrar</button> 
+            </form>
+            
+            <p class="footer-text">
+                Já possui uma conta? <a href="login.php">Voltar ao Login</a>
+            </p>
+        </div>
+    </section>
 </body>
 </html>

@@ -1,0 +1,100 @@
+/* Reset de margens */
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Fundo da tela inteira */
+.all_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+/* O "Card" branco centralizado */
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+    width: 350px;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Estilização dos grupos de input */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Efeito de clique no input */
+.input-group input:focus {
+    border-color: #D1001E;
+}
+
+/* Botão Vermelho */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #D1001E;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #91061b;
+}
+
+/* Texto do link de voltar */
+.footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-text a {
+    color: #D1001E;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}

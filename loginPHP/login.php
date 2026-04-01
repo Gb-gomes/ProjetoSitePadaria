@@ -2,6 +2,9 @@
 session_start(); // le a mensagem de erro na tela
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
+if (isset($_GET['sucesso'])) {
+    echo "<p style='color:green;'>Cadastro realizado com sucesso!</p>";
+}
 ?>
 
 <!DOCTYPE html>
