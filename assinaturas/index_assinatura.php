@@ -15,29 +15,54 @@
 
 <body>
     <section class="all_page">
-        <header class="header">
+         <header class="header">
+
             <section class="logo">
-                <img src="/img/logo.png" alt="Logo da padaria">
+                <img src="../img/logo.png" alt="Logo da padaria">
             </section>
 
-            <nav>
-                <a href="/index.html">Home</a>
-                <a href="/produtos/Produtos.html">Produtos</a>
-                <a href="/sobre_nos/index_sobre_nos.html">Sobre Nós</a>
-                <a href="/contato/index_contato.html">Contato</a>
+            <nav class="menu">
+                <a href="../index.php">Home</a>
+                <a href="./Produtos.php">Produtos</a>
+                <a href="../sobre_nos/index_sobre_nos.php">Sobre Nós</a>
+                <a href="../contato/index_contato.php">Contato</a>
             </nav>
 
-        <section class="group">
-            <section class="carrinho">
-                <i class="fa-solid fa-cart-plus"></i>
-            </section>
+            <section class="group">
 
-            <section class="cadastro_conteiner">
-                <a href="../loginPHP/login.php" class="button-login">Login</a>
-            </section>
-        </section>
+                <div class="carrinho">
+                    <i class="fa-solid fa-cart-plus"></i>
+                </div>
 
+                <div class="cadastro_conteiner">
+
+                    <?php if (isset($_SESSION['usuario_id'])): ?>
+
+                        <div class="user-info">
+
+                            <?php if ($_SESSION['usuario_tipo'] == 'admin'): ?>
+                                <span class="admin">
+                                    ADMIN - <?php echo $_SESSION['usuario_nome']; ?>
+                                </span>
+                            <?php else: ?>
+                                <span class="user">
+                                    Olá, <?php echo $_SESSION['usuario_nome']; ?>
+                                </span>
+                            <?php endif; ?>
+
+                            <a href="../loginPHP/login.php" class="button-logout">Sair</a>
+
+                        </div>
+
+                    <?php else: ?>
+                        <a href="../loginPHP/login.php" class="button-login">Login</a>
+                    <?php endif; ?>
+
+                </div>
+
+            </section>
         </header>
+
   <div class="container">
     <div class="form-section">
       <h1>Assinatura de Pães</h1>
