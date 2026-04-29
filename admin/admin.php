@@ -5,6 +5,9 @@ require 'conecta.php';
 echo "usuário logado";
 
 ?>
+
+<?php include 'auth_admin.php'; ?>
+
 <!doctype html>
 <html>
 <header>

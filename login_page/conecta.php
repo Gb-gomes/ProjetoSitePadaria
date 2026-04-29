@@ -2,7 +2,7 @@
 $host = 'localhost';
 $db = 'sistema_empresa';
 $user = 'root';
-$pass = '1234';
+$pass = '';
 try {
 $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
 // Configura o PDO para lançar exceções em caso de erro
