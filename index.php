@@ -33,7 +33,22 @@
             </section>
 
             <section class="cadastro_conteiner">
-                <a href="login_page/login.html" class="button-login">Login</a>
+                <?php session_start(); ?>
+
+<?php if (!isset($_SESSION['usuario_id'])): ?>
+
+    <a href="login.php" class="button-login">Login</a>
+
+<?php else: ?>
+
+    <a href="logout.php" class="button-login">Sair</a>
+
+    <?php if ($_SESSION['usuario_tipo'] === 'admin'): ?>
+        <a href="admin.php" class="button-login">Admin</a>
+    <?php endif; ?>
+
+<?php endif; ?>
+
             </section>
         </section>
 
