@@ -39,7 +39,8 @@ O sistema utiliza um banco de dados relacional contendo as seguintes entidades:
 - Pagamento é confirmado
 - Pedido é finalizado
 <br> </br>
-<h5>Tecnologias Utilizadas</h5>
+
+**Tecnologias Utilizadas**
 - Front-end: HTML, CSS, JavaScript (React)
 - Back-end: PHP
 - Banco de Dados: MySQL
