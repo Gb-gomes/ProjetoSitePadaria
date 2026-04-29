@@ -1,3 +1,6 @@
+
+<?php include 'auth.php'; ?>
+
 <!doctype html>
 <html>
 <header>
