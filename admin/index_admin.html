@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Painel Admin - Padaria</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+  <div class="flex h-screen">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="w-56 text-white p-4" style="background-color:#D1001E">
+      <h1 class="text-xl font-bold mb-6">Admin Padaria</h1>
+
+      <nav class="space-y-2">
+        <a href="#" class="block">Dashboard</a>
+        <a href="#" class="block">Produtos</a>
+        <a href="#" class="block">Clientes</a>
+        <a href="#" class="block">Pedidos</a>
+        <a href="#" class="block">Estoque</a>
+      </nav>
+    </aside>
+
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <main class="flex-1 p-6">
+
+      <!-- TÍTULO -->
+      <h2 class="text-2xl font-bold mb-4">Dashboard</h2>
+
+
+      <!-- ================= CARDS ================= -->
+      <div class="grid grid-cols-2 gap-4 mb-6">
+
+        <div class="bg-white p-3 rounded shadow">
+          <p>Pedidos: 10</p>
+        </div>
+
+        <div class="bg-white p-3 rounded shadow">
+          <p>Clientes: 30</p>
+        </div>
+
+      </div>
+
+
+      <!-- ================= PRODUTOS ================= -->
+      <section class="mb-6">
+
+        <h3 class="text-lg font-semibold mb-2">Produtos</h3>
+
+        <table class="w-full bg-white rounded shadow text-sm">
+
+          <!-- Cabeçalho -->
+          <tr class="bg-gray-200">
+            <th class="p-2">Nome</th>
+            <th>Preço</th>
+          </tr>
+
+          <!-- Linha de exemplo -->
+          <tr class="text-center">
+            <td>Pão</td>
+            <td>R$1,00</td>
+          </tr>
+
+        </table>
+
+      </section>
+
+
+      <!-- ================= PEDIDOS ================= -->
+      <section>
+
+        <h3 class="text-lg font-semibold mb-2">Pedidos</h3>
+
+        <table class="w-full bg-white rounded shadow text-sm">
+
+          <!-- Cabeçalho -->
+          <tr class="bg-gray-200">
+            <th class="p-2">Cliente</th>
+            <th>Status</th>
+          </tr>
+
+          <!-- Linha de exemplo -->
+          <tr class="text-center">
+            <td>Maria</td>
+            <td>Em preparo</td>
+          </tr>
+
+        </table>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+
+</html>
