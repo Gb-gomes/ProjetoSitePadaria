@@ -23,7 +23,7 @@
 
         <nav class="menu">
             <a href="../index.php">Home</a>
-            <a href="./Produtos.php">Produtos</a>
+            <a href="../produtos/Produtos.php">Produtos</a>
             <a href="../sobre_nos/index_sobre_nos.php">Sobre Nós</a>
             <a href="../contato/index_contato.php">Contato</a>
         </nav>

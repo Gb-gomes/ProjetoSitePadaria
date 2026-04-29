@@ -13,75 +13,106 @@ body {
 
 /* HEADER */
 .header {
-    background-color: #ffffff;
     display: flex;
+    height: 80px;
     align-items: center;
     justify-content: space-between;
     padding: 10px 40px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    background-color: #fff;
     border-bottom: 2px solid #EAD7C0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    height: 80px;
+}
+
+/* LOGO */
+.logo img {
+    height: 60px;
+}
+
+/* MENU */
+.menu {
+    display: flex;
     gap: 20px;
 }
 
-.logo img {
-    max-height: 70px;
-    width: auto;
-    left: 50%;
-}
-
-nav a {
+.menu a {
+    text-decoration: none;
     color: #D1001E;
-    text-decoration: none;
-    margin: 10px 20px;
-    padding: 10px 20px;
-    font-size: larger;
     font-weight: 500;
-    transition: color 0.2s;
-}
-
-nav a:hover {
-    color: #FFB400;
-    text-decoration: underline;
-}
-
-.carrinho{
-    align-items: center;
-    justify-content: space-between;
-    gap: 5px;
-    size: 20px;
-}
-
-.group {
-    align-items: end;
-    justify-content: space-between;
-    gap: 30px;
-    display: flex;
-    right: 20%;
-}
-
-.button-login {
-    margin-top: 5px;
-    padding: 10px 20px;
-    background: #D1001E;
-    color: #ffffff;
-    border-radius: 14px;
-    text-decoration: none;
     font-size: 16px;
 }
 
+.menu a:hover {
+    color: #FFB400;
+}
 
-header {
-background-color: #e2b97c;
-color: white;
-text-align: center;
-padding: 1rem;
+/* LADO DIREITO */
+.group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* CARRINHO */
+.carrinho i {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* USER */
+.cadastro_conteiner {
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user {
+    font-weight: 500;
+}
+
+.admin {
+    color: red;
+    font-weight: bold;
+}
+
+/* BOTÕES */
+.button-login,
+.button-logout {
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.button-login {
+    background-color: #4CAF50;
+}
+
+.button-login:hover {
+    background-color: #3e8e41;
+}
+
+.button-logout {
+    background-color: #ff4d4d;
+}
+
+.button-logout:hover {
+    background-color: #cc0000;
+}
+
+.menu,
+.group {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 
+/* estilizaçã dos produtos */
 .produtos {
 display: flex;
 flex-wrap: wrap;
@@ -183,27 +214,6 @@ button:hover {
 background-color: #d1a55e;
 }
 
-
-
-.carrinho {
-background-color: white;
-padding: 20px;
-margin: 20px;
-border-radius: 8px;
-max-width: 400px;
-}
-
-
-/* .carrinho ul {
-list-style: none;
-padding: 0;
-}
-
-
-.carrinho li {
-border-bottom: 1px solid #ddd;
-padding: 5px 0;
-} */
 
 /* FOOTER */
 footer {
