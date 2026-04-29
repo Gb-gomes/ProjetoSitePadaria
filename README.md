@@ -50,4 +50,6 @@ O sistema utiliza um banco de dados relacional contendo as seguintes entidades:
 <br> </br>
 Este projeto foi desenvolvido com fins educacionais, simulando um sistema real de e-commerce para padaria, aplicando conceitos de desenvolvimento web, banco de dados e regras de negócio.
 
+<img width="1352" height="593" alt="Captura de tela 2026-04-29 164143" src="https://github.com/user-attachments/assets/e4ef1974-1169-4f49-8ad3-20597696a788" />
+
 
