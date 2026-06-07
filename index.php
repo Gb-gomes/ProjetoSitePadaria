@@ -21,14 +21,14 @@ session_start();
 <header class="header">
 
     <section class="logo">
-        <img src="./img/logo.png" alt="Logo da padaria">
+        <img src="./assets/img/logo.png" alt="Logo da padaria">
     </section>
 
     <nav class="menu">
         <a href="index.php">Home</a>
-        <a href="./produtos/Produtos.php">Produtos</a>
-        <a href="./sobre_nos/index_sobre_nos.php">Sobre Nós</a>
-        <a href="./contato/index_contato.php">Contato</a>
+        <a href="./pages/produtos/Produtos.php">Produtos</a>
+        <a href="./pages/sobre_nos/index_sobre_nos.php">Sobre Nós</a>
+        <a href="./pages/contato/index_contato.php">Contato</a>
 
         <?php if (isset($_SESSION['usuario_tipo']) && $_SESSION['usuario_tipo'] == 'admin'): ?>
         <a href="./administrador/index_admin.php" class="admin-link">Painel Admin</a>
@@ -73,7 +73,7 @@ session_start();
 
     <main>
         <section class="container_banner">
-            <img src="img/fresh-0,3.png" alt="Hero image - banner de Pães">
+            <img src="./assets/img/fresh-0,3.png" alt="Hero image - banner de Pães">
             <button class="button-comprar" onclick="window.location.href= '/produtos/Produtos.html'">Peça e
                 experimente!</button>
         </section>
@@ -87,7 +87,7 @@ session_start();
             <h2>Novidades no Cardápio</h2>
             <div class="produtos-grid">
                 <div class="produto">
-                    <img class="img_produto" src="img/cookiesrecheados.jpg" alt="Cookies Recheados">
+                    <img class="img_produto" src="./assets/img/cookiesrecheados.jpg" alt="Cookies Recheados">
                     <h3>Cookie de Caramelo Salgado</h3>
                     <p>R$ 5,00</p>
                     <p class="descricao-produto">Deliciosos cookies recheados com chocolate belga e gotas de caramelo
@@ -96,7 +96,7 @@ session_start();
 
 
                 <div class="produto">
-                    <img class="img_produto" src="img/empadão.jpg" alt="Torta de Frango Cremoso">
+                    <img class="img_produto" src="./assets/img/empadão.jpg" alt="Torta de Frango Cremoso">
                     <h3>Torta de Frango Cremoso</h3>
                     <p>R$ 8,50</p>
                     <p class="descricao-produto">Massa que derrete na boca e delicioso recheio de frango com catupiry.
@@ -105,7 +105,7 @@ session_start();
 
 
                 <div class="produto">
-                    <img class="img_produto" src="img/pao-de-queijo-minas.jpg" alt="Croissant">
+                    <img class="img_produto" src="./assets/img/pao-de-queijo-minas.jpg" alt="Croissant">
                     <h3>Pão de queijo Romeu e Julieta</h3>
                     <p>R$ 6,00</p>
                     <p class="descricao-produto">Pão de queijo, goiabada cascão e requeijão em barra. O protagonista que
@@ -119,25 +119,25 @@ session_start();
             <h2>Principais Vendidos</h2>
             <div class="produtos-grid">
                 <div class="produto">
-                    <img class="img_produto" src="img/pãointegral.jpg" alt="Pão Integral">
+                    <img class="img_produto" src="./assets/img/pãointegral.jpg" alt="Pão Integral">
                     <h3>Pão Integral</h3>
                     <p>R$ 0,80</p>
                 </div>
 
                 <div class="produto">
-                    <img class="img_produto" src="img/broademilho.jpg" alt="Broa de Milho">
+                    <img class="img_produto" src="./assets/img/broademilho.jpg" alt="Broa de Milho">
                     <h3>Broa de Milho</h3>
                     <p>R$ 7,00</p>
                 </div>
 
                 <div class="produto">
-                    <img class="img_produto" src="img/geleia.jpeg" alt="Pão na Chapa com Queijo">
+                    <img class="img_produto" src="./assets/img/geleia.jpeg" alt="Pão na Chapa com Queijo">
                     <h3>Geleia de morango</h3>
                     <p>R$ 15,00</p>
                 </div>
 
                 <div class="produto">
-                    <img class="img_produto" src="img/brioche.jpg" alt="Pão na Chapa com Queijo">
+                    <img class="img_produto" src="./assets/img/brioche.jpg" alt="Pão na Chapa com Queijo">
                     <h3> Brioche</h3>
                     <p>R$ 6,00</p>
                 </div>
@@ -192,25 +192,6 @@ session_start();
     </main>
     </section>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-links">
-                <a href="/privacy-policy/privacy-policy.html">Política de Privacidade</a>
-                <a href="/terms-of-servicy/terms-of-servicy.html">Termos de Serviço</a>
-            </div>
-
-            <div class="footer-socials">
-                <a href="https://www.instagram.com/familiadelicias.br/?igsh=M3F0M3BkaGNkMmd4#"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@artesanaldelicias?lang=pt-BR" target="_blank"><i
-                        class="fab fa-tiktok"></i></a>
-            </div>
-
-
-            <p class="footer-copy">&copy; 2025 Padaria Artesanal Delícias. All rights reserved.</p>
-        </div>
-
-    </footer>
+    <?php require './includes/footer.php'; ?>
 </body>
-
 </html>

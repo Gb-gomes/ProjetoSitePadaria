@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'conecta.php';
+require '../includes/conecta.php';
 
 $email = $_POST['email'] ?? '';
 $senha = $_POST['senha'] ?? '';

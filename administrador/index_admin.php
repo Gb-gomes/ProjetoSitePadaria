@@ -1,39 +1,64 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['usuario_tipo']) || $_SESSION['usuario_tipo'] != 'admin') {
-    header("Location: ../loginPHP/login.php");
-    exit();
-}
+require_once './../includes/verifica_admin.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
+<?php include './../includes/header.php'; ?>
+
+
 <head>
-
-    <nav class="menu">
-        <a href="../index.php">Home</a>
-        <a href="../produtos/Produtos.php">Produtos</a>
-        <a href="../sobre_nos/index_sobre_nos.php">Sobre Nós</a>
-        <a href="../contato/index_contato.php">Contato</a>
-    </nav>
     <meta charset="UTF-8">
-    <title>Painel Admin</title>
-
-
+    <title>Painel Administrativo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
 
-<h1>Painel do Administrador</h1>
+<body class="bg-gray-100">
 
-<ul>
-    <li><a href="adicionar_produto.php">Adicionar Produto</a></li>
-    <li><a href="listar_produtos.php">Gerenciar Produtos</a></li>
-    <li><a href="listar_usuarios.php">Gerenciar Usuários</a></li>
-    <li><a href="adicionar_promocao.php">Adicionar Promoção</a></li>
-    <li><a href="adicionar_promocao.php">Gerenciar Assinaturas</a></li>
-    <li><a href="adicionar_promocao.php">Gerenciar Finanças</a></li>
-</ul>
+<div class="flex">
+
+    <?php include './../includes/sidebar.php'; ?>
+
+    <div class="flex-1">
+
+        <?php include './../includes/topbar.php'; ?>
+
+        <main class="p-8">
+
+            <h2 class="text-3xl font-bold mb-6">
+                Dashboard
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <div class="bg-white p-5 rounded shadow">
+                    <h3 class="font-bold">
+                        Produtos
+                    </h3>
+
+                    <p class="text-3xl">
+                        0
+                    </p>
+                </div>
+
+                <div class="bg-white p-5 rounded shadow">
+                    <h3 class="font-bold">
+                        Usuários
+                    </h3>
+
+                    <p class="text-3xl">
+                        0
+                    </p>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
 
 </body>
 </html>

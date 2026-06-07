@@ -22,20 +22,7 @@ session_start();
 
      <header class="header">
 
-        <section class="logo">
-            <img src="../img/logo.png" alt="Logo da padaria">
-        </section>
-
-        <nav class="menu">
-            <a href="../index.php">Home</a>
-            <a href="../produtos/Produtos.php">Produtos</a>
-            <a href="index_sobre_nos.php">Sobre Nós</a>
-            <a href="../contato/index_contato.php">Contato</a>
-
-            <?php if (isset($_SESSION['usuario_tipo']) && $_SESSION['usuario_tipo'] == 'admin'): ?>
-                <a href="../administrador/index_admin.php" class="admin-link">Painel Admin</a>
-            <?php endif; ?>
-        </nav>
+        <?php include '../../includes/header.php'; ?>
 
         <section class="group">
 
