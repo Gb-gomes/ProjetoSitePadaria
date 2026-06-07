@@ -3,7 +3,7 @@ require_once './../../includes/config_page.php';
 require_once './../../includes/conecta.php';
 require_once './../../includes/verifica_admin.php';
 
-// Pegar o ID do produto
+
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 if ($id <= 0) {
@@ -11,7 +11,7 @@ if ($id <= 0) {
     exit();
 }
 
-// Buscar dados do produto
+
 try {
     $sql = "SELECT * FROM produtos WHERE id = :id";
     $stmt = $pdo->prepare($sql);

@@ -3,7 +3,7 @@ require_once './../../includes/config_page.php';
 require_once './../../includes/conecta.php';
 require_once './../../includes/verifica_admin.php';
 
-// Buscar produtos
+
 $sql = "SELECT * FROM produtos ORDER BY id DESC";
 $stmt = $pdo->query($sql);
 $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);

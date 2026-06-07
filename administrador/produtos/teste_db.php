@@ -7,7 +7,7 @@ require_once './../../includes/conecta.php';
 
 echo "<h2>Teste de Conexão</h2>";
 
-// Verificar se $pdo existe
+
 if (isset($pdo)) {
     echo "<p style='color:green'>✓ Variável \$pdo existe</p>";
 } else {
@@ -15,7 +15,7 @@ if (isset($pdo)) {
     die();
 }
 
-// Testar consulta
+
 try {
     $sql = "SHOW TABLES";
     $stmt = $pdo->query($sql);
@@ -28,7 +28,7 @@ try {
     }
     echo "</ul>";
     
-    // Verificar tabela produtos
+  
     $sql = "SELECT COUNT(*) as total FROM produtos";
     $stmt = $pdo->query($sql);
     $count = $stmt->fetch();

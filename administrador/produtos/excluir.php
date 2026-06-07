@@ -10,7 +10,7 @@ if ($id <= 0) {
     exit();
 }
 
-// Buscar dados do produto para mostrar na confirmação
+
 try {
     $sql = "SELECT * FROM produtos WHERE id = :id";
     $stmt = $pdo->prepare($sql);
