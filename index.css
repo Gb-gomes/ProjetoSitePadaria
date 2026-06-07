@@ -147,7 +147,7 @@ h3{
 .opinioes-feedbacks {
  margin-top: 5px;
  background-image: url('img/div-background.jpg');
- height: 150px;
+ height: 350px;
 }
 
 .welcome-section p {
@@ -231,6 +231,72 @@ h3{
   }
 }
 
+.cards-depoimentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 1.5rem;
+}
+
+.card-depoimento {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.estrelas {
+    color: #BA7517;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.texto-depoimento {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    font-style: italic;
+    flex: 1;
+    margin: 0;
+}
+
+.autor-depoimento {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #E1F5EE;
+    color: #0F6E56;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.nome-autor {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.tag-autor {
+    font-size: 12px;
+    color: #999;
+    margin: 0;
+}
+
+
 /* FOOTER */
 footer {
     background-color:rgb(160, 97, 45);
@@ -240,6 +306,28 @@ footer {
     color: #EAD7C0;
 }
 
+.redes-sociais {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.rede {
+    flex: 1;
+    min-width: 300px;
+    max-width: 340px;
+}
+
+.rede blockquote {
+    width: 100% !important;
+    min-width: unset !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+}
 .footer-container {
   display: flex;
   flex-direction: column;
@@ -284,3 +372,4 @@ footer {
   color: #EAD7C0;
   margin-top: 10px;
 }
+

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="unload=()">
     <title>Padaria Artesanal Delícias</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -33,22 +34,7 @@
             </section>
 
             <section class="cadastro_conteiner">
-                <?php session_start(); ?>
-
-<?php if (!isset($_SESSION['usuario_id'])): ?>
-
-    <a href="login.php" class="button-login">Login</a>
-
-<?php else: ?>
-
-    <a href="logout.php" class="button-login">Sair</a>
-
-    <?php if ($_SESSION['usuario_tipo'] === 'admin'): ?>
-        <a href="admin.php" class="button-login">Admin</a>
-    <?php endif; ?>
-
-<?php endif; ?>
-
+                <a href="login_page/login.html" class="button-login">Login</a>
             </section>
         </section>
 
@@ -127,48 +113,102 @@
             <section class="assinatura-de-paes">
                 <h2>Assinatura de pães</h2>
                 <h3>Receba nossos pães fresquinhos toda semana com descontos exclusivos para assinantes!</h3>
-                <button class="button-assinar" onclick="window.location.href='/assinaturas/index_assinaturas.html'">
-  Assine agora!
-</button>
+                <button class="button-assinar" onclick="window.location.href='/assinaturas/index_assinatura.html'">
+                    Assine agora!
+                </button>
             </section>
 
             <section class="opinioes-feedbacks">
-                <h2>Opiniões e Feedbacks</h2>
-                <h4>"O melhor pão da cidade! Sempre fresquinho e delicioso." - Ana Maria S.</h4>
-                <h4>"Adoro a variedade de doces artesanais. Recomendo a todos!" - João Filipe P.</h4>
-            </section>
+    <h2>Opiniões e Feedbacks</h2>
+    <div class="cards-depoimentos">
 
-            <section class="comunidade">
-                <h2>Comunidade</h2>
-                <h3>Nos acompanhe nas redes e participe de nossos eventos comunitários. Junte-se à nossa família Delícias!</h3>
-                <section class="midias-container">
+        <div class="card-depoimento">
+            <div class="estrelas">★★★★★</div>
+            <p class="texto-depoimento">"O melhor pão da cidade! Sempre fresquinho e delicioso. Compro toda semana e nunca decepciona."</p>
+            <div class="autor-depoimento">
+                <div class="avatar">AM</div>
+                <div>
+                    <p class="nome-autor">Ana Maria S.</p>
+                    <p class="tag-autor">Cliente fiel</p>
+                </div>
+            </div>
+        </div>
 
-    <!-- Instagram -->
-    <div class="midia instagram">
-      <blockquote class="instagram-media"
-        data-instgrm-permalink="https://www.instagram.com/p/DQaBJTEgXIh/?utm_source=ig_embed&amp;utm_campaign=loading"
-        data-instgrm-version="14">
-      </blockquote>
-      <script async src="//www.instagram.com/embed.js"></script>
+        <div class="card-depoimento">
+            <div class="estrelas">★★★★★</div>
+            <p class="texto-depoimento">"Adoro a variedade de doces artesanais. Recomendo a todos que querem qualidade de verdade!"</p>
+            <div class="autor-depoimento">
+                <div class="avatar">JP</div>
+                <div>
+                    <p class="nome-autor">João Filipe P.</p>
+                    <p class="tag-autor">Cliente fiel</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-depoimento">
+            <div class="estrelas">★★★★★</div>
+            <p class="texto-depoimento">"O pão de queijo Romeu e Julieta é simplesmente incrível. Voltei três vezes na mesma semana!"</p>
+            <div class="autor-depoimento">
+                <div class="avatar">MC</div>
+                <div>
+                    <p class="nome-autor">Maria Clara R.</p>
+                    <p class="tag-autor">Cliente</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-depoimento">
+            <div class="estrelas">★★★★★</div>
+            <p class="texto-depoimento">"Atendimento acolhedor e produto de primeira. A broa de milho me lembra a casa da minha avó."</p>
+            <div class="autor-depoimento">
+                <div class="avatar">RS</div>
+                <div>
+                    <p class="nome-autor">Ricardo S.</p>
+                    <p class="tag-autor">Cliente</p>
+                </div>
+            </div>
+        </div>
+
     </div>
+</section>
 
+         <section class="comunidade">
+    <h2>Comunidade</h2>
+    <h3>Nos acompanhe nas redes e participe de nossos eventos comunitários. Junte-se à nossa família Delícias!</h3>
+
+    <section class="redes-sociais">
+
+       <div class="rede">
     <!-- TikTok -->
-    <div class="midia tiktok">
-      <blockquote class="tiktok-embed"
-        cite="https://www.tiktok.com/@artesanaldelicias/video/7569310987635952904"
-        data-video-id="7569310987635952904"
-        style="max-width: 100%; min-width: 300px;">
+    <blockquote class="tiktok-embed"
+        cite="https://www.tiktok.com/@artesanaldelicias/video/7648127081275985170"
+        data-video-id="7648127081275985170"
+        style="max-width: 605px; min-width: 325px;">
         <section>
-          <a target="_blank" href="https://www.tiktok.com/@artesanaldelicias?refer=embed">@artesanaldelicias</a>
-          <p>O sabor que abraçar 🥰</p>
+            <a target="_blank" title="@artesanaldelicias" href="https://www.tiktok.com/@artesanaldelicias?refer=embed">@artesanaldelicias</a>
+            <p>Que o seu melhor dia seja conosco! 🌾🥯</p>
+            <a target="_blank" title="♬ som original - Padaria Artesanal Delícias" href="https://www.tiktok.com/music/som-original-7648127108565060359?refer=embed">♬ som original - Padaria Artesanal Delícias</a>
         </section>
-      </blockquote>
-      <script async src="https://www.tiktok.com/embed.js"></script>
-    </div>
+    </blockquote>
+</div>
 
-  </section>
-        </main>
+        <div class="rede">
+            <!-- Instagram -->
+            <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DZOTBgSsalbp84rYx4keVhs1UIQwKA1P_eJuE00/"
+                data-instgrm-version="14">
+            </blockquote>
+        </div>
+
     </section>
+
+    <script async src="https://www.tiktok.com/embed.js"></script>
+    <script async src="https://www.instagram.com/embed.js"></script>
+
+</section>
+
 
     <footer>
         <div class="footer-container">
@@ -178,7 +218,7 @@
             </div>
 
             <div class="footer-socials">
-                <a href="https://www.instagram.com/familiadelicias.br/?igsh=M3F0M3BkaGNkMmd4#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/artesanaidelicias/"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.tiktok.com/@artesanaldelicias?lang=pt-BR" target="_blank"><i class="fab fa-tiktok"></i></a>
             </div>
 

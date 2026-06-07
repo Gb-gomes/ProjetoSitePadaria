@@ -205,6 +205,19 @@ border-bottom: 1px solid #ddd;
 padding: 5px 0;
 }
 
+.botoes-carrinho {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left:25px ;
+}
+
+.botoes-carrinho button {
+    padding: 10px;
+    margin: 5px 0 20px;
+}
+
+
 /* FOOTER */
 footer {
     background-color:rgb(160, 97, 45);

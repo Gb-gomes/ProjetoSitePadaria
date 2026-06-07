@@ -32,6 +32,7 @@
                 <i class="fa-solid fa-cart-plus"></i>
             </section>
 
+
             <section class="cadastro_conteiner">
                 <a href="login_page/login.html" class="button-login">Login</a>
             </section>
@@ -42,49 +43,60 @@
 <main>
     <section class="produtos">
         <div class="produto">
-            <img src="/img/pãopizza2.jpg" alt="Pão Italiano">
-            <h2>Foccacia</h2>
+            <img src="/img/paosourdbough.PNG" alt="Pão Sourdough">
+            <h2>Pão Sourdough</h2>
             <p class="preco">R$ 12,90</p>
-            <button onclick="adicionarAoCarrinho('Pão Italiano', 12.90)">Adicionar ao carrinho</button>
+            <button onclick="adicionarAoCarrinho('Pão Sourdough', 12.90)">Adicionar ao carrinho</button>
         </div>
 
         <div class="produto">
-            <img src="/img/croissant2.jpg" alt="Croissant de Chocolate">
-            <h2>Croissant de Chocolate</h2>
+            <img src="/img/croissant.PNG" alt="Croissant">
+            <h2>Croissant </h2>
             <p class="preco">R$ 8,50</p>
-            <button onclick="adicionarAoCarrinho('Croissant de Chocolate', 8.50)">Adicionar ao carrinho</button>
+            <button onclick="adicionarAoCarrinho('Croissant', 8.50)">Adicionar ao carrinho</button>
         </div>
-
 
         <div class="produto">
-            <img src="/img/pao-de-queijo-minas2.jpg" alt="Pão com queijo">
-            <h2>Pão com queijo</h2>
-            <p class="preco">R$ 5,00</p>
-            <button onclick="adicionarAoCarrinho('Bolo de Limão', 45.00)">Adicionar ao carrinho</button>
+            <img src="/img/tortadelimao.JPG" alt="Torta de Limão">
+            <h2>Torta de Limão</h2>
+            <p class="preco">R$ 25,00</p>
+            <button onclick="adicionarAoCarrinho('Torta de Limão', 25.00)">Adicionar ao carrinho</button>
         </div>
+    
+    <div class="produto">
+            <img src="/img/geleia_de_frutas.PNG" alt="Geleia de Frutas">
+            <h2>Geleia de Frutas</h2>
+            <p class="preco">R$ 15,00</p>
+            <button onclick="adicionarAoCarrinho('Geleia de Frutas', 15.00)">Adicionar ao carrinho</button>
+        </div> 
     </section>
 
     <section class="produtos2">
         <div class="produto">
-            <img src="/img/empadão2.jpg" alt="Pão Italiano">
-            <h2>Torta de Frango </h2>
+            <img src="/img/ciabatta_recheada.PNG" alt="Ciabatta Recheada">
+            <h2>Ciabatta Recheada </h2>
             <p class="preco">R$ 12,90</p>
-            <button onclick="adicionarAoCarrinho('Pão Italiano', 12.90)">Adicionar ao carrinho</button>
+            <button onclick="adicionarAoCarrinho('Ciabatta Recheada', 12.90)">Adicionar ao carrinho</button>
         </div>
 
         <div class="produto">
-            <img src="/img/broademilho2.jpg" width="30px;" alt="Croissant de Chocolate">
-            <h2>Broa de milho</h2>
+            <img src="/img/paofrances.PNG" width="30px;" alt="Pão Francês">
+            <h2>Pão Francês</h2>
             <p class="preco">R$ 12,50</p>
-            <button onclick="adicionarAoCarrinho('Croissant de Chocolate', 8.50)">Adicionar ao carrinho</button>
+            <button onclick="adicionarAoCarrinho('Pão Francês', 12.50)">Adicionar ao carrinho</button>
         </div>
-
-
+    
         <div class="produto">
-            <img src="/img/brioche2.jpg" alt="Pão com queijo">
-            <h2>Brioche</h2>
-            <p class="preco">R$ 11,00</p>
-            <button onclick="adicionarAoCarrinho('Bolo de Limão', 45.00)">Adicionar ao carrinho</button>
+            <img src="/img/paodequeijo.PNG" alt="Pão de Queijo">
+            <h2>Pão de Queijo</h2>
+            <p class="preco">R$ 15,00</p>
+            <button onclick="adicionarAoCarrinho('Pão de Queijo', 15.00)">Adicionar ao carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="/img/paosourdbough_choco.JPG" alt="Pão Sourdough de Chocolate">
+            <h2>Pão Sourdough de Chocolate</h2>
+            <p class="preco">R$ 12,90</p>
+            <button onclick="adicionarAoCarrinho('Pão Sourdough de Chocolate', 12.90)">Adicionar ao carrinho</button>
         </div>
     </section>
 
@@ -94,23 +106,88 @@
         <ul id="lista-carrinho"></ul>
         <p id="total">Total: R$ 0,00</p>
     </section>
+
+    <div class="botoes-carrinho">
+    <button onclick="finalizarCompra()">Finalizar compra</button>
+    <button onclick="esvaziarCarrinho()">Esvaziar carrinho</button>
+</div>
+
 </main>
 
 
 <script>
+let carrinho = {};
+
+function adicionarAoCarrinho(nome, preco) {
+    if (carrinho[nome]) {
+        carrinho[nome].qtd++;
+    } else {
+        carrinho[nome] = {
+            nome: nome,
+            preco: preco,
+            qtd: 1
+        };
+    }
+
+    renderizarCarrinho();
+}
+
+function renderizarCarrinho() {
+    const lista = document.getElementById('lista-carrinho');
     let total = 0;
 
+    lista.innerHTML = '';
 
-    function adicionarAoCarrinho(nome, preco) {
-    const lista = document.getElementById('lista-carrinho');
-    const item = document.createElement('li');
-    item.textContent = `${nome} - R$ ${preco.toFixed(2)}`;
-    lista.appendChild(item);
-    total += preco;
-    document.getElementById('total').textContent = `Total: R$ ${total.toFixed(2)}`;
+    Object.values(carrinho).forEach(item => {
+        const li = document.createElement('li');
+
+        li.textContent =
+            `${item.nome} x${item.qtd} — R$ ${(item.preco * item.qtd).toFixed(2)}`;
+
+        lista.appendChild(li);
+
+        total += item.preco * item.qtd;
+    });
+
+    document.getElementById('total').textContent =
+        `Total: R$ ${total.toFixed(2)}`;
+}
+
+function esvaziarCarrinho() {
+    carrinho = {};
+    renderizarCarrinho();
+}
+
+function finalizarCompra() {
+    if (Object.keys(carrinho).length === 0) {
+        alert("Seu carrinho está vazio!");
+        return;
     }
-</script>
 
+    let mensagem = " *Novo pedido - Padaria Artesanal*%0A%0A";
+    let total = 0;
+
+    Object.values(carrinho).forEach(item => {
+        const subtotal = item.preco * item.qtd;
+
+        mensagem += ` ${item.nome}%0A`;
+        mensagem += `Quantidade: ${item.qtd}%0A`;
+        mensagem += `Subtotal: R$ ${subtotal.toFixed(2)}%0A%0A`;
+
+        total += subtotal;
+    });
+
+    mensagem += ` *TOTAL: R$ ${total.toFixed(2)}*%0A%0A`;
+    mensagem += "  Segue meu pedido para confirmação! :)";
+
+    const numero = "5532988244722"; // seu WhatsApp aqui
+
+    const url = `https://wa.me/${numero}?text=${mensagem}`;
+
+    window.open(url, "_blank");
+}
+
+</script>
 
 
 <footer>
@@ -121,7 +198,7 @@
             </div>
 
             <div class="footer-socials">
-                <a href="https://www.instagram.com/familiadelicias.br/?igsh=M3F0M3BkaGNkMmd4#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/artesanaidelicias/"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.tiktok.com/@artesanaldelicias?lang=pt-BR" target="_blank"><i class="fab fa-tiktok"></i></a>
             </div>
 
