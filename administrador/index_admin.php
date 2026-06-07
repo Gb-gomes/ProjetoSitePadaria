@@ -5,13 +5,14 @@ require_once './../includes/verifica_admin.php';
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<?php include './../includes/header.php'; ?>
+
 
 
 <head>
     <meta charset="UTF-8">
     <title>Painel Administrativo</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <?php include './../includes/header.php'; ?>
 </head>
 
 <body class="bg-gray-100">
@@ -34,11 +35,11 @@ require_once './../includes/verifica_admin.php';
 
                 <div class="bg-white p-5 rounded shadow">
                     <h3 class="font-bold">
-                        Produtos
+                        Produtos Cadastrados
                     </h3>
 
                     <p class="text-3xl">
-                        0
+                        <?php echo $total_produtos ?? 0; ?>
                     </p>
                 </div>
 

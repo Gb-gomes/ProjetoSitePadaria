@@ -11,22 +11,22 @@
             Dashboard
         </a>
 
-        <a href="/ProjetoSitePadaria/administrador/produtos/listar_produtos.php"
+        <a href="<?= BASE_URL ?>/administrador/produtos/listar.php"
            class="hover:bg-red-800 p-2 rounded">
             Produtos
         </a>
 
-        <a href="/ProjetoSitePadaria/administrador/produtos/cadastrar_produto.php"
+        <a href="<?= BASE_URL ?>/administrador/produtos/cadastra.php"
            class="hover:bg-red-800 p-2 rounded">
             Cadastrar Produto
         </a>
 
-        <a href="/ProjetoSitePadaria/administrador/usuarios/listar_usuarios.php"
+        <a href="<?= BASE_URL ?>/administrador/usuarios/listar.php"
            class="hover:bg-red-800 p-2 rounded">
             Usuários
         </a>
 
-        <a href="/ProjetoSitePadaria/loginPHP/logout.php"
+        <a href="<?= BASE_URL ?>/loginPHP/logout.php"
            class="hover:bg-red-800 p-2 rounded">
             Sair
         </a>
