@@ -1,8 +1,13 @@
 <?php
 session_start();
-require_once '../../includes/conecta.php'; // Incluir conexão com o banco
+require_once '../../includes/conecta.php'; 
 
-// Buscar todos os produtos ativos (se tiver campo ativo) ou todos
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['carrinho_json'])) {
+    $_SESSION['carrinho'] = json_decode($_POST['carrinho_json'], true);
+    $_SESSION['total'] = $_POST['total'] ?? 0;
+    exit();
+}
+
 try {
     $sql = "SELECT * FROM produtos ORDER BY id DESC";
     $stmt = $pdo->query($sql);
@@ -24,7 +29,6 @@ try {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        /* Estilos adicionais para os produtos do banco */
         .produtos-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -79,6 +83,13 @@ try {
             margin-bottom: 1rem;
         }
         
+
+        .bnt_compra{
+            display: flex;
+            gap: 0.5rem;
+            flex-direction: column;
+        }
+
         .btn-carrinho {
             background-color: #b91c1c;
             color: white;
@@ -89,6 +100,22 @@ try {
             width: 100%;
             font-size: 1rem;
             transition: background-color 0.3s ease;
+        }
+
+        .btn-compra {
+             background-color: #4fe315;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-compra:hover {
+            background-color: #2b6a28;
         }
         
         .btn-carrinho:hover {
@@ -118,6 +145,116 @@ try {
                 padding: 1rem;
             }
         }
+
+        /* Estilos para a lista de produtos */
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.produto-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.produto-imagem {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.produto-info {
+    padding: 1rem;
+}
+
+.produto-nome {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.produto-preco {
+    font-size: 1.3rem;
+    color: #b91c1c;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.btn-carrinho {
+    background: #b91c1c;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-carrinho:hover {
+    background: #7f1d1d;
+}
+
+/* Carrinho */
+.carrinho {
+    background: white;
+    padding: 1.5rem;
+    margin: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.carrinho ul {
+    list-style: none;
+    padding: 0;
+}
+
+.carrinho li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carrinho input {
+    padding: 0.25rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn-finalizar {
+    background: #16a34a;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn-finalizar:hover {
+    background: #15803d;
+}
+
+@media (max-width: 768px) {
+    .produtos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
     </style>
 </head>
 
@@ -192,10 +329,18 @@ try {
                                         R$ <?= number_format($produto['preco'], 2, ',', '.') ?>
                                     </div>
                                     
-                                    <button class="btn-carrinho" 
-                                            onclick="adicionarAoCarrinho('<?= htmlspecialchars($produto['nome']) ?>', <?= $produto['preco'] ?>, <?= $produto['id'] ?>)">
-                                        <i class="fa-solid fa-cart-plus"></i> Adicionar ao carrinho
-                                    </button>
+                                    <div class="bnt_compra">
+
+                                        <button class="btn-compra" 
+                                                onclick="adicionarAoCarrinho('<?= htmlspecialchars($produto['nome']) ?>', <?= $produto['preco'] ?>, <?= $produto['id'] ?>)">
+                                            <i class="fa-solid fa-cart-plus"></i> Comprar Produto 
+                                        </button>
+
+                                        <button class="btn-carrinho" 
+                                                onclick="adicionarAoCarrinho('<?= htmlspecialchars($produto['nome']) ?>', <?= $produto['preco'] ?>, <?= $produto['id'] ?>)">
+                                            <i class="fa-solid fa-cart-plus"></i> Adicionar ao carrinho
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         <?php endforeach; ?>
@@ -225,6 +370,7 @@ try {
                 <p class="footer-copy">&copy; 2025 Padaria Artesanal Delícias. All rights reserved.</p>
             </div>
         </footer>
+        
     </section>
 
     <script>
@@ -299,18 +445,25 @@ try {
         }
         
         function finalizarCompra() {
-            if (carrinho.length === 0) {
-                alert('Seu carrinho está vazio!');
+                if (carrinho.length === 0) {
+                    Swal.fire({
+                            icon: 'warning',
+                            title: 'Carrinho vazio!',
+                            text: 'Adicione produtos ao carrinho antes de finalizar.',
+                            confirmButtonColor: '#b91c1c'
+                            });
                 return;
-            }
-            
-            // Salvar carrinho no sessionStorage para a página de checkout
-            sessionStorage.setItem('carrinho_final', JSON.stringify(carrinho));
-            sessionStorage.setItem('total_final', total.toFixed(2));
-            
-            // Redirecionar para página de checkout/finalização
-            window.location.href = 'checkout.php';
-        }
+                        }
+                    fetch('checkout.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: 'carrinho=' + JSON.stringify(carrinho) + '&total=' + total
+                    }).then(() => {
+                        window.location.href = 'checkout.php';
+                    });
+                }
         
         // Carregar carrinho do localStorage ao iniciar
         window.onload = function() {
