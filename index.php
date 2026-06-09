@@ -25,7 +25,7 @@ session_start();
     <main>
         <section class="container_banner">
             <img src="./assets/img/fresh-0,3.png" alt="Hero image - banner de Pães">
-            <button class="button-comprar" onclick="window.location.href= '/produtos/Produtos.html'">Peça e
+            <button class="button-comprar" onclick="window.location.href= './pages/produtos/Produtos.php'">Peça e
                 experimente!</button>
         </section>
 
