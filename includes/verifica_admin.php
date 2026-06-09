@@ -8,4 +8,4 @@ if (
 ) {
     header("Location: ../../loginPHP/login.php");
     exit();
-}
+} 
