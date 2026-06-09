@@ -11,16 +11,6 @@ body {
     color: #402416;
 }
 
-/* HEADER */
-.header {
-    display: flex;
-    height: 80px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 40px;
-    background-color: #fff;
-    border-bottom: 2px solid #EAD7C0;
-}
 
 /* LOGO */
 .logo img {

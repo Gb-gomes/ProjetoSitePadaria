@@ -18,58 +18,9 @@ session_start();
 
 <body>
 
-<header class="header">
-
-    <section class="logo">
-        <img src="./assets/img/logo.png" alt="Logo da padaria">
-    </section>
-
-    <nav class="menu">
-        <a href="index.php">Home</a>
-        <a href="./pages/produtos/Produtos.php">Produtos</a>
-        <a href="./pages/sobre_nos/index_sobre_nos.php">Sobre Nós</a>
-        <a href="./pages/contato/index_contato.php">Contato</a>
-
-        <?php if (isset($_SESSION['usuario_tipo']) && $_SESSION['usuario_tipo'] == 'admin'): ?>
-        <a href="./administrador/index_admin.php" class="admin-link">Painel Admin</a>
-        <?php endif; ?>
-    </nav>
-
-    <section class="group">
-
-        <div class="carrinho">
-            <i class="fa-solid fa-cart-plus"></i>
-        </div>
-
-        <div class="cadastro_conteiner">
-
-            <?php if (isset($_SESSION['usuario_id'])): ?>
-
-                <div class="user-info">
-
-                    <?php if ($_SESSION['usuario_tipo'] == 'admin'): ?>
-                        <span class="admin">
-                            ADMIN - <?php echo $_SESSION['usuario_nome']; ?>
-                        </span>
-                    <?php else: ?>
-                        <span class="user">
-                            Olá, <?php echo $_SESSION['usuario_nome']; ?>
-                        </span>
-                    <?php endif; ?>
-
-                    <a href="loginPHP/login.php" class="button-logout">Sair</a>
-
-                </div>
-
-            <?php else: ?>
-                <a href="loginPHP/login.php" class="button-login">Login</a>
-            <?php endif; ?>
-
-        </div>
-
-    </section>
-
-</header>
+    <header>
+            <?php include './includes/header.php'; ?>
+    </header>
 
     <main>
         <section class="container_banner">

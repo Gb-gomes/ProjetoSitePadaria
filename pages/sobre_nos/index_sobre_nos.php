@@ -20,43 +20,9 @@ session_start();
 <body>
     <section class="all_page">
 
-     <header class="header">
+     <header>
 
         <?php include '../../includes/header.php'; ?>
-
-        <section class="group">
-
-            <div class="carrinho">
-                <i class="fa-solid fa-cart-plus"></i>
-            </div>
-
-            <div class="cadastro_conteiner">
-
-                <?php if (isset($_SESSION['usuario_id'])): ?>
-
-                    <div class="user-info">
-
-                        <?php if ($_SESSION['usuario_tipo'] == 'admin'): ?>
-                            <span class="admin">
-                                ADMIN - <?php echo $_SESSION['usuario_nome']; ?>
-                            </span>
-                        <?php else: ?>
-                            <span class="user">
-                                Olá, <?php echo $_SESSION['usuario_nome']; ?>
-                            </span>
-                        <?php endif; ?>
-
-                        <a href="../loginPHP/login.php" class="button-logout">Sair</a>
-
-                    </div>
-
-                <?php else: ?>
-                    <a href="../loginPHP/login.php" class="button-login">Login</a>
-                <?php endif; ?>
-
-            </div>
-
-        </section>
 
     </header>
 

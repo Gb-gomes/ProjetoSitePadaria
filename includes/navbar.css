@@ -1,0 +1,188 @@
+/* Navbar Moderna - Estilos globais */
+.nav-modern {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-modern .nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-modern .nav-links {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.nav-modern .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-size: 16px;
+    position: relative;
+}
+
+.nav-modern .nav-links a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+.nav-modern .nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: #FFD700;
+    transition: width 0.3s ease;
+}
+
+.nav-modern .nav-links a:hover::before {
+    width: 70%;
+}
+
+.nav-modern .nav-links .admin-link {
+    background: #FFD700;
+    color: #8B4513;
+    font-weight: bold;
+}
+
+.nav-modern .nav-links .admin-link:hover {
+    background: #FFC107;
+    transform: translateY(-2px);
+}
+
+.nav-modern .cadastro_container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-modern .user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255,255,255,0.15);
+    padding: 8px 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+}
+
+.nav-modern .admin {
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-modern .user {
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.nav-modern .button-logout,
+.nav-modern .button-login {
+    background: #FFD700;
+    color: #8B4513;
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.nav-modern .button-logout:hover,
+.nav-modern .button-login:hover {
+    background: #FFC107;
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Menu Mobile */
+.nav-modern .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-modern .menu-toggle {
+        display: block;
+    }
+    
+    .nav-modern .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .nav-modern .nav-links.show {
+        display: flex;
+    }
+    
+    .nav-modern .nav-links a {
+        display: block;
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .nav-modern .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .nav-modern .cadastro_container {
+        margin-left: auto;
+    }
+    
+    .nav-modern .user-info {
+        padding: 5px 15px;
+    }
+    
+    .nav-modern .admin,
+    .nav-modern .user {
+        font-size: 12px;
+    }
+    
+    .nav-modern .button-logout,
+    .nav-modern .button-login {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-modern .user-info {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-end;
+    }
+    
+    .nav-modern .admin,
+    .nav-modern .user {
+        font-size: 11px;
+    }
+}

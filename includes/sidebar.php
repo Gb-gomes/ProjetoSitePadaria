@@ -32,7 +32,7 @@
             <i class="fas fa-shopping-cart"></i> Pedidos
         </a>
 
-        <a href="<?= BASE_URL ?>/index.php" target="_blank"
+        <a href="<?= BASE_URL ?>/index.php"
            class="hover:bg-red-800 p-2 rounded">
             Sair
         </a>
